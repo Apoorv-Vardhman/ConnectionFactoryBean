@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="connection" class="com.fb.beans.ConnectionFactoryBean">
+        <constructor-arg name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+        <constructor-arg name="url" value="jdbc:mysql://localhost:3306/learning"/>
+        <constructor-arg name="username" value="root"/>
+        <constructor-arg name="password" value=""/>
+    </bean>
+    <bean id="userAccessor" class="com.fb.beans.UserAccessor"/>
+</beans>
